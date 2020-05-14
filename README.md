@@ -1,4 +1,4 @@
-# Workshop MQTT deep dive
+# Example collection for using HiveMQ MQTT client library
 These exercises aim to provide a use case scenario in which most MQTT feature can be practically applied.
 
 ## General Use Case
