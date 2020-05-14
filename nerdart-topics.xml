@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <topics group="interests" description="topic description for nerd-art demo - usecase 1">
+        <topic>
+            <name>interest/#</name>
+            <actions>sub</actions>
+            <qos>0,1</qos>
+        </topic>
+        <topic>
+            <name>interest/drip-painting</name>
+            <actions>pub,sub</actions>
+            <qos>0,1</qos>
+        </topic>
+        <topic>
+            <name>interest/oil</name>
+            <actions>pub,sub</actions>
+            <qos>0,1</qos>
+        </topic>
+        <topic>
+            <name>interest/abstract</name>
+            <actions>pub,sub</actions>
+            <qos>0,1</qos>
+        </topic>
+        <topic>
+            <name>interest/landscape</name>
+            <actions>pub,sub</actions>
+            <qos>0,1</qos>
+        </topic>
+        <topic>
+            <name>interest/portrait</name>
+            <actions>pub,sub</actions>
+            <qos>0,1</qos>
+        </topic>
+    </topics>
+    <topics group="handhelds" description="topics to push information to handhelds - usecase 1">
+        <topic>
+            <name>handheld/#</name>
+            <actions>sub</actions>
+            <qos>0,1</qos>
+        </topic>
+        <topic>
+            <name>handheld/+/interest</name>
+            <actions>pub,sub</actions>
+            <qos>0,1</qos>
+        </topic>
+    </topics>
+    <topics group="clima"
+            description="topics get information about pictures, temperature and humidity sensors - usecase 2">
+        <topic>
+            <name>room/</name>
+            <actions>pub,sub</actions>
+            <qos>1</qos>
+        </topic>
+        <topic>
+            <filter>room/+/hum</filter>
+            <actions>pub,sub</actions>
+            <qos>0,1</qos>
+        </topic>
+        <topic>
+            <filter>room/+/temp</filter>
+            <actions>pub,sub</actions>
+            <qos>0,1</qos>
+        </topic>
+        <topic>
+            <filter>room/+/command</filter>
+            <actions>pub,sub</actions>
+            <qos>0,1</qos>
+        </topic>
+    </topics>
+    <topics group="security"
+            description="topics get information about pictures, temperature and humidity sensors -  usecase 3">
+        <topic>
+            <filter>room/security/#</filter>
+            <actions>sub</actions>
+            <qos>2</qos>
+        </topic>
+        <topic>
+            <filter>room/security/+/status</filter>
+            <actions>pub,sub</actions>
+            <qos>1,2</qos>
+        </topic>
+    </topics>
+</xml>
